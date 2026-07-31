@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>العقارات — عين محايل</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14110F;--maroon:#8C2B32;--gold:#C09A6B;--green:#1E6B4F;--cream:#F2EBDD;--muted:#6B6560;--line:#E2D9C8;--display:'Cairo',sans-serif;--body:'Noto Kufi Arabic',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.9}
+.wrap{max-width:1100px;margin-inline:auto;padding-inline:24px}
+header{background:#fff;border-bottom:1px solid var(--line);padding:18px 0;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(20,17,15,.07)}
+.nav{display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{width:50px;height:50px;object-fit:contain;border-radius:4px}
+.brand-text{font-family:var(--display);font-size:1.25rem;font-weight:900}
+.brand-text span{color:var(--maroon)}
+.back{margin-inline-start:auto;background:var(--maroon);color:#fff;padding:9px 20px;text-decoration:none;font-weight:700;font-family:var(--body);font-size:.88rem}
+.hero{background:var(--ink);color:#fff;padding:48px 0 56px;text-align:center}
+.hero h1{font-family:var(--display);font-size:2.2rem;font-weight:900;color:#fff}
+.hero p{color:#9E968C;margin-top:10px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;padding:28px 0;border-bottom:1px solid var(--line)}
+.filter-btn{background:#fff;border:1.5px solid var(--line);padding:8px 18px;font-family:var(--body);font-size:.88rem;cursor:pointer;border-radius:2px;transition:all .18s;font-weight:500}
+.filter-btn.active,.filter-btn:hover{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px}
+.prop-card{background:#fff;transition:background .18s;position:relative}
+.prop-card:hover{background:var(--cream)}
+.prop-img{width:100%;height:200px;object-fit:cover;display:block;background:var(--cream)}
+.prop-img-placeholder{width:100%;height:200px;background:var(--cream);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem}
+.prop-body{padding:20px 18px 24px}
+.prop-status{position:absolute;top:12px;right:12px;padding:4px 12px;font-size:.72rem;font-weight:700;font-family:var(--display)}
+.status-available{background:var(--green);color:#fff}
+.status-reserved{background:var(--gold);color:#fff}
+.status-sold{background:#6B6560;color:#fff}
+.prop-type{font-size:.72rem;letter-spacing:.5px;color:var(--maroon);font-weight:700;font-family:var(--display);display:block;margin-bottom:8px}
+.prop-title{font-family:var(--display);font-size:1.05rem;font-weight:800;margin-bottom:8px;line-height:1.35}
+.prop-loc{font-size:.86rem;color:var(--muted);margin-bottom:12px}
+.prop-price{font-family:var(--display);font-size:1.2rem;font-weight:900;color:var(--maroon)}
+.prop-area{font-size:.82rem;color:var(--muted);margin-top:4px}
+.prop-wa{display:block;margin-top:14px;background:var(--green);color:#fff;text-align:center;padding:10px;font-weight:700;font-family:var(--body);text-decoration:none;font-size:.9rem}
+.empty{grid-column:1/-1;padding:60px;text-align:center;color:var(--muted);font-size:1rem}
+.sec{padding:56px 0}
+footer{background:var(--ink);color:#7E766C;padding:32px 0;font-size:.86rem;font-family:var(--body);text-align:center}
+footer span{color:var(--gold)}
+@media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.hero h1{font-size:1.6rem}.wrap{padding-inline:16px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <img src="https://i.ibb.co/zVtVCdDD/88bce7ad683fa9abdb4e26cd6efd0c1b-tplv-tiktokx-cropcenter-1080-1080.jpg" alt="عين محايل"/>
+      <span class="brand-text">عين <span>محايل</span></span>
+    </a>
+    <a class="back" href="/">الرئيسية</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>العقارات المتاحة</h1>
+    <p>عقارات محايل عسير — بيع وإيجار</p>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="filters">
+      <button class="filter-btn active" onclick="filter('all',this)">الكل</button>
+      <button class="filter-btn" onclick="filter('بيع',this)">للبيع</button>
+      <button class="filter-btn" onclick="filter('إيجار',this)">للإيجار</button>
+      <button class="filter-btn" onclick="filter('فيلا',this)">فيلا</button>
+      <button class="filter-btn" onclick="filter('شقة',this)">شقة</button>
+      <button class="filter-btn" onclick="filter('أرض',this)">أرض</button>
+      <button class="filter-btn" onclick="filter('محل تجاري',this)">محل تجاري</button>
+    </div>
+    <div class="grid" id="propsGrid">
+      <div class="empty">جاري تحميل العقارات...</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>عين محايل</span> · محايل عسير · ترخيص فال 1100038743
+</footer>
+
+<script>
+var allProps = [];
+var currentFilter = 'all';
+
+async function loadProperties() {
+  try {
+    const res = await fetch('https://api.github.com/repos/mn9haj-hash/eye-mohayl/contents/properties');
+    if (!res.ok) { showEmpty(); return; }
+    const files = await res.json();
+    const mdFiles = files.filter(f => f.name.endsWith('.md'));
+    if (!mdFiles.length) { showEmpty(); return; }
+    
+    const props = await Promise.all(mdFiles.map(async f => {
+      const r = await fetch(f.download_url);
+      const text = await r.text();
+      return parseFrontmatter(text);
+    }));
+    
+    allProps = props.sort((a,b) => new Date(b.date) - new Date(a.date));
+    renderProps(allProps);
+  } catch(e) {
+    showEmpty();
+  }
+}
+
+function parseFrontmatter(text) {
+  const match = text.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) return {};
+  const obj = {};
+  match[1].split('\n').forEach(line => {
+    const i = line.indexOf(':');
+    if (i > -1) {
+      const key = line.slice(0,i).trim();
+      const val = line.slice(i+1).trim().replace(/^["']|["']$/g,'');
+      obj[key] = val;
+    }
+  });
+  return obj;
+}
+
+function renderProps(props) {
+  const grid = document.getElementById('propsGrid');
+  if (!props.length) { showEmpty(); return; }
+  grid.innerHTML = props.map(p => {
+    const statusClass = p.status === 'متاح' ? 'status-available' : p.status === 'محجوز' ? 'status-reserved' : 'status-sold';
+    const waMsg = encodeURIComponent('السلام عليكم، استفسار عن عقار: ' + (p.title||'') + ' — ' + (p.location||''));
+    return `<div class="prop-card" data-purpose="${p.purpose||''}" data-type="${p.type||''}">
+      <span class="prop-status ${statusClass}">${p.status||'متاح'}</span>
+      ${p.image ? `<img class="prop-img" src="${p.image}" alt="${p.title||''}"/>` : `<div class="prop-img-placeholder">لا توجد صورة</div>`}
+      <div class="prop-body">
+        <span class="prop-type">${p.type||''} · ${p.purpose||''}</span>
+        <p class="prop-title">${p.title||''}</p>
+        <p class="prop-loc">📍 ${p.location||''}</p>
+        <p class="prop-price">${p.price ? p.price+' ر.س' : 'السعر عند التواصل'}</p>
+        ${p.area ? `<p class="prop-area">المساحة: ${p.area} م²</p>` : ''}
+        <a class="prop-wa" href="https://wa.me/966558764123?text=${waMsg}">تواصل على واتساب</a>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filter(val, btn) {
+  currentFilter = val;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  if (val === 'all') { renderProps(allProps); return; }
+  const filtered = allProps.filter(p => p.purpose === val || p.type === val);
+  renderProps(filtered);
+}
+
+function showEmpty() {
+  document.getElementById('propsGrid').innerHTML = '<div class="empty">لا توجد عقارات حالياً — ستُضاف قريباً.</div>';
+}
+
+loadProperties();
+</script>
+</body>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عين محايل — عادل فائع عسيري | عقارات وإعلانات محايل عسير</title>
+<meta name="description" content="منصة عين محايل الإعلانية والعقارية في محايل عسير. اعرض عقارك، اطلب عقارك، أو احجز إعلانك مع عادل فائع علي عسيري.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14110F;
+  --maroon:#8C2B32;
+  --maroon-dark:#6A1F25;
+  --gold:#C09A6B;
+  --green:#1E6B4F;
+  --green-dark:#17573F;
+  --cream:#F2EBDD;
+  --paper:#FAFAF8;
+  --muted:#6B6560;
+  --line:#E2D9C8;
+  --display:'Cairo',system-ui,sans-serif;
+  --body:'Noto Kufi Arabic',system-ui,sans-serif;
+  --wrap:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.9;-webkit-font-smoothing:antialiased;word-spacing:normal;text-rendering:optimizeLegibility;overflow-wrap:break-word}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:24px}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+
+/* سدو */
+.sadu{display:block;width:100%;height:20px}
+.sadu-top{position:sticky;top:0;z-index:70;height:18px}
+
+/* هيدر */
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:18px;z-index:60;box-shadow:0 2px 20px rgba(20,17,15,.07)}
+.nav{display:flex;align-items:center;gap:18px;height:78px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand-logo{width:58px;height:58px;object-fit:contain;border-radius:4px;flex-shrink:0}
+.brand-text{font-family:var(--display);font-size:1.35rem;font-weight:900;color:var(--ink);line-height:1.1}
+.brand-text span{color:var(--maroon)}
+.brand-sub{font-size:.75rem;color:var(--muted);font-family:var(--body);font-weight:400;display:block;margin-top:2px}
+.nav-links{list-style:none;display:flex;gap:4px;margin-inline-start:auto}
+.nav-links a{font-family:var(--body);font-size:.88rem;font-weight:500;color:var(--muted);padding:7px 11px;border-radius:3px;transition:color .18s,background .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--maroon);background:rgba(140,43,50,.06);font-weight:700}
+.nav-cta{background:var(--maroon);color:#fff;font-family:var(--body);font-weight:700;font-size:.88rem;padding:10px 20px;border:none;cursor:pointer;border-bottom:3px solid var(--maroon-dark);transition:background .18s;white-space:nowrap;margin-inline-start:6px}
+.nav-cta:hover{background:var(--maroon-dark)}
+.burger{display:none;margin-inline-start:auto;background:none;border:1.5px solid var(--line);padding:10px 12px;border-radius:4px;cursor:pointer;line-height:0;min-width:46px;min-height:46px;align-items:center;justify-content:center}
+
+/* صفحات */
+.page{display:none}
+.page.active{display:block}
+
+/* هيرو */
+.hero{background:#fff;padding:68px 0 80px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:center}
+.eyebrow{font-size:.78rem;color:var(--maroon);font-weight:700;font-family:var(--display);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.eyebrow::before{content:"";height:1px;width:44px;background:var(--maroon)}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(2.6rem,6.5vw,4.8rem);line-height:1.1}
+h1 .accent{color:var(--maroon)}
+.hero-lede{max-width:48ch;margin-top:22px;font-size:1rem;color:var(--muted);font-weight:400;line-height:2}
+.hero-logo{width:100%;object-fit:contain;filter:drop-shadow(0 6px 24px rgba(140,43,50,.13))}
+.hero-logo-cap{font-family:var(--display);font-size:.7rem;color:var(--muted);text-align:center;margin-top:12px;font-weight:600}
+
+/* بطاقات خدمات */
+.service-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.sc{background:#fff;padding:26px 22px 30px;cursor:pointer;transition:background .18s;position:relative;overflow:hidden}
+.sc::before{content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px;background:transparent;transition:background .18s}
+.sc:hover,.sc.hl{background:var(--cream)}
+.sc:hover::before,.sc.hl::before{background:var(--maroon)}
+.sc-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.sc-icon svg{width:22px;height:22px}
+.sc-tag{font-size:.75rem;font-weight:700;font-family:var(--display);color:var(--maroon);display:block;margin-bottom:8px}
+.sc h3{font-family:var(--display);font-size:1.05rem;font-weight:800;margin-bottom:8px;line-height:1.35}
+.sc p{font-size:.88rem;color:var(--muted);font-weight:400;line-height:1.75}
+.sc-arrow{position:absolute;inset-inline-end:20px;top:50%;transform:translateY(-50%);font-size:1.2rem;color:var(--line);transition:color .18s}
+.sc:hover .sc-arrow,.sc.hl .sc-arrow{color:var(--maroon)}
+
+/* شريط مناطق */
+.region-strip{background:var(--cream);border-top:3px solid var(--maroon);border-bottom:3px solid var(--maroon);padding:14px 0;overflow:hidden}
+.region-inner{display:flex;align-items:center;white-space:nowrap}
+.region-item{display:inline-flex;align-items:center;gap:14px;padding:0 28px;border-inline-end:1.5px solid var(--gold);font-family:var(--display);font-size:.8rem;font-weight:700;color:var(--maroon)}
+.region-item:last-child{border-inline-end:none}
+.rdot{width:8px;height:8px;background:var(--gold);display:inline-block;transform:rotate(45deg);flex-shrink:0}
+
+/* منصات */
+.platforms{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.pcard{background:#fff;padding:28px 26px;display:flex;gap:16px;align-items:flex-start;transition:background .18s}
+.pcard:hover{background:var(--cream)}
+.pcard-icon{width:42px;height:42px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pcard-icon svg{width:24px;height:24px}
+.pcard-name{font-family:var(--display);font-size:1.1rem;font-weight:800;display:block;margin-bottom:3px}
+.pcard-handle{font-size:.82rem;color:var(--muted);direction:ltr;display:block;margin-bottom:9px}
+.pcard-desc{font-size:.88rem;color:var(--muted);font-weight:400;line-height:1.7}
+
+/* بطاقات */
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:#fff;padding:30px 24px 36px;transition:background .18s}
+.card:hover{background:var(--cream)}
+.card-tag{font-size:.75rem;font-weight:700;font-family:var(--display);color:var(--maroon);display:block;margin-bottom:12px}
+.card h3{font-family:var(--display);font-size:1.1rem;font-weight:800;margin-bottom:10px;line-height:1.35}
+.card p{font-size:.9rem;color:var(--muted);font-weight:400;line-height:1.78}
+
+/* خطوات */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.step{padding:32px 24px 32px 0;border-top:3px solid var(--ink)}
+.step+.step{padding-inline-start:24px}
+.step-n{font-family:var(--display);font-size:2.8rem;font-weight:900;color:var(--gold);line-height:1;display:block;margin-bottom:14px}
+.step h3{font-family:var(--display);font-size:1.08rem;font-weight:800;margin-bottom:7px}
+.step p{font-size:.9rem;color:var(--muted);font-weight:400;line-height:1.78}
+
+/* تراخيص */
+.trust-bg{background:var(--ink);color:#fff}
+.lic{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2A2523;border:1px solid #2A2523}
+.lic>div{background:var(--ink);padding:28px 26px}
+.lic dt{font-size:.76rem;color:var(--gold);font-weight:700;font-family:var(--display);margin-bottom:10px}
+.lic dd{font-family:var(--display);font-size:1.45rem;font-weight:900}
+.lic small{display:block;color:#7E766C;font-size:.82rem;font-weight:400;margin-top:6px;font-family:var(--body)}
+
+/* تواصل */
+.chan{list-style:none;display:grid;gap:2px}
+.chan li{background:#fff;border:1px solid var(--line);border-block-end:none}
+.chan li:last-child{border-block-end:1px solid var(--line)}
+.chan a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:17px 22px;transition:background .18s,color .18s}
+.chan a:hover{background:var(--ink);color:#fff}
+.cn{font-weight:700;font-family:var(--display);font-size:.95rem}
+.cv{font-size:.84rem;color:var(--muted);direction:ltr;font-weight:400}
+.chan a:hover .cv{color:var(--gold)}
+
+/* فورم */
+.form-wrap{background:var(--cream);border:1px solid var(--line);padding:40px 36px}
+.form-title{font-family:var(--display);font-size:1.6rem;font-weight:900;margin-bottom:6px}
+.form-sub{color:var(--muted);font-size:.95rem;font-weight:400;margin-bottom:28px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg .full{grid-column:1/-1}
+.fl{display:flex;flex-direction:column;gap:6px}
+.fl label{font-size:.82rem;font-weight:700;font-family:var(--display);color:var(--ink)}
+.fl input,.fl select,.fl textarea{background:#fff;border:1.5px solid var(--line);padding:12px 15px;font-family:var(--body);font-size:1rem;color:var(--ink);border-radius:0;outline:none;width:100%;transition:border-color .18s}
+.fl input:focus,.fl select:focus,.fl textarea:focus{border-color:var(--maroon)}
+.fl select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6560' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 13px center}
+.fl textarea{resize:vertical;min-height:90px}
+.fl input::placeholder,.fl textarea::placeholder{color:#B0A8A2;font-weight:400}
+.btn{display:inline-block;font-family:var(--body);font-weight:700;font-size:1rem;padding:14px 34px;border:none;cursor:pointer;transition:background .18s,transform .15s}
+.btn-maroon{background:var(--maroon);color:#fff;border-bottom:3px solid var(--maroon-dark)}
+.btn-maroon:hover{background:var(--maroon-dark);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--maroon);color:var(--maroon)}
+.btn-green{background:var(--green);color:#fff;border-bottom:3px solid var(--green-dark)}
+.btn-green:hover{background:var(--green-dark)}
+.form-ok{display:none;background:var(--green);color:#fff;padding:18px 22px;text-align:center;margin-top:16px;grid-column:1/-1}
+.form-ok.show{display:block}
+.form-ok b{font-family:var(--display);font-size:1rem;display:block;margin-bottom:4px}
+.form-note-sm{font-size:.8rem;color:var(--muted);margin-top:10px;font-weight:400;grid-column:1/-1}
+
+/* أقسام */
+.sec{padding:76px 0}
+.sec-head{margin-bottom:44px;max-width:54ch}
+.sec-num{font-family:var(--display);font-size:.78rem;color:var(--maroon);font-weight:700;display:block;margin-bottom:10px}
+h2{font-family:var(--display);font-weight:900;font-size:clamp(1.8rem,3.8vw,2.6rem);line-height:1.22}
+.sec-head p{margin-top:12px;color:var(--muted);font-weight:400;font-size:1rem}
+
+/* من نحن */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-logo{width:280px;max-width:100%;filter:drop-shadow(0 8px 32px rgba(140,43,50,.15))}
+.about-stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px}
+.stat{background:var(--cream);padding:20px 18px;text-align:center}
+.stat b{font-family:var(--display);font-size:1.6rem;font-weight:900;color:var(--maroon);display:block}
+.stat span{font-size:.82rem;color:var(--muted);font-weight:400}
+
+/* سياسة الخصوصية */
+.privacy-wrap{max-width:720px}
+.privacy-wrap h3{font-family:var(--display);font-size:1.1rem;font-weight:800;margin-top:32px;margin-bottom:10px;color:var(--ink)}
+.privacy-wrap p{font-size:.97rem;color:var(--muted);font-weight:400;line-height:1.95;margin-bottom:8px}
+.privacy-wrap ul{padding-inline-start:20px;margin-bottom:8px}
+.privacy-wrap ul li{font-size:.97rem;color:var(--muted);font-weight:400;line-height:1.9;margin-bottom:4px}
+.privacy-hero{background:var(--ink);color:#fff;padding:48px 0 56px}
+.privacy-hero h2{color:#fff}
+.privacy-hero p{color:#9E968C;margin-top:10px;font-size:1rem}
+
+/* باقات */
+.adv-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.plan{background:#fff;padding:32px 26px 36px;position:relative}
+.plan.featured{background:var(--cream);border:2px solid var(--maroon)}
+.plan-badge{position:absolute;top:-12px;inset-inline-start:50%;transform:translateX(50%);background:var(--maroon);color:#fff;font-size:.72rem;font-weight:700;font-family:var(--display);padding:4px 14px}
+.plan-name{font-family:var(--display);font-size:1.15rem;font-weight:800;margin-bottom:8px}
+.plan-dur{font-size:.82rem;color:var(--muted);margin-bottom:18px;font-weight:400}
+.plan-feats{list-style:none;display:grid;gap:8px;margin-bottom:24px}
+.plan-feats li{font-size:.9rem;color:var(--ink);font-weight:400;display:flex;align-items:flex-start;gap:8px}
+.plan-feats li::before{content:"✓";color:var(--green);font-weight:700;flex-shrink:0;margin-top:2px}
+
+/* فوتر */
+footer{background:var(--ink);color:#7E766C;padding:40px 0;font-size:.86rem;font-weight:400;font-family:var(--body)}
+.foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+.foot-brand{font-family:var(--display);font-size:1.15rem;font-weight:900;color:var(--cream)}
+.foot-brand span{color:var(--gold)}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap}
+.foot-links a{color:#9E968C;transition:color .18s}
+.foot-links a:hover{color:var(--gold)}
+footer a{color:#9E968C}
+footer a:hover{color:var(--gold)}
+
+/* حركة */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* تابلت */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-logo{display:none}
+  .service-cards{grid-template-columns:1fr}
+  .cards4{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr}
+  .step{padding-inline-start:0!important;border-top:2px solid var(--ink)}
+  .platforms{grid-template-columns:1fr}
+  .lic{grid-template-columns:1fr}
+  .adv-plans{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:32px}
+  .about-logo{width:180px;margin:0 auto;display:block}
+  .contact-grid{grid-template-columns:1fr!important;gap:28px}
+}
+
+/* جوال */
+@media(max-width:660px){
+  html{font-size:16px}
+  body{font-size:1rem;line-height:1.85}
+  .wrap{padding-inline:18px}
+  .sec{padding:44px 0}
+  .sec-head{margin-bottom:28px}
+  .nav{height:68px;gap:10px}
+  .brand-logo{width:46px;height:46px}
+  .brand-text{font-size:1.15rem}
+  .brand-sub{display:none}
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .mobile-menu{display:none;position:absolute;top:68px;inset-inline:0;background:#fff;border-bottom:3px solid var(--maroon);padding:10px 18px 22px;z-index:100;box-shadow:0 8px 28px rgba(20,17,15,.12)}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:15px 4px;border-bottom:1px solid var(--line);font-family:var(--display);font-weight:700;color:var(--ink);font-size:1.05rem}
+  .mobile-menu a:last-child{border-bottom:none}
+  .hero{padding:40px 0 48px}
+  .eyebrow{font-size:.74rem;margin-bottom:16px}
+  h1{font-size:2.5rem;line-height:1.12}
+  .hero-lede{font-size:.97rem;margin-top:16px;line-height:1.85;max-width:100%}
+  .service-cards{grid-template-columns:1fr;margin-top:28px}
+  .sc{padding:22px 18px 26px}
+  .sc h3{font-size:1.05rem}
+  .region-strip{padding:12px 0}
+  .region-item{font-size:.72rem;padding:0 16px}
+  .platforms{grid-template-columns:1fr}
+  .pcard{padding:20px 18px;gap:14px}
+  .pcard-icon{width:38px;height:38px}
+  .pcard-name{font-size:1rem}
+  .cards4{grid-template-columns:1fr}
+  .card{padding:22px 18px 28px}
+  .steps{grid-template-columns:1fr}
+  .step{padding:24px 0}
+  .step-n{font-size:2.2rem}
+  .lic{grid-template-columns:1fr}
+  .lic>div{padding:22px 20px}
+  .lic dd{font-size:1.25rem}
+  .fg{grid-template-columns:1fr}
+  .fg .full{grid-column:1}
+  .form-wrap{padding:24px 18px}
+  .form-title{font-size:1.3rem}
+  .fl input,.fl select,.fl textarea{font-size:1rem;padding:13px 14px}
+  .btn{padding:15px 26px;font-size:1rem;width:100%;text-align:center}
+  .adv-plans{grid-template-columns:1fr}
+  .plan{padding:26px 20px 30px}
+  .chan a{padding:15px 16px}
+  .cn{font-size:.9rem}
+  h2{font-size:1.75rem}
+  .foot{flex-direction:column;align-items:flex-start;gap:10px}
+  .about-stat{grid-template-columns:1fr}
+  .privacy-hero{padding:36px 0 40px}
+  .form-ok{grid-column:1}
+  .form-note-sm{grid-column:1}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+:focus-visible{outline:2px solid var(--maroon);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="sadu" width="30" height="18" patternUnits="userSpaceOnUse">
+      <rect width="30" height="18" fill="#14110F"/>
+      <rect y="0" width="30" height="3" fill="#8C2B32"/>
+      <rect y="3" width="30" height="1.5" fill="#F2EBDD"/>
+      <rect y="14" width="30" height="1.5" fill="#F2EBDD"/>
+      <rect y="15.5" width="30" height="2.5" fill="#8C2B32"/>
+      <polygon points="0,13 7.5,5 15,13" fill="#F2EBDD"/>
+      <polygon points="15,5 22.5,13 30,5" fill="#1E6B4F"/>
+      <polygon points="0,5 3,5 0,8" fill="#C09A6B"/>
+      <polygon points="27,13 30,13 30,10" fill="#C09A6B"/>
+    </pattern>
+  </defs>
+</svg>
+
+<svg class="sadu sadu-top" preserveAspectRatio="none" aria-hidden="true"><rect width="100%" height="18" fill="url(#sadu)"/></svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" onclick="showPage('home');return false">
+      <img class="brand-logo" src="https://i.ibb.co/zVtVCdDD/88bce7ad683fa9abdb4e26cd6efd0c1b-tplv-tiktokx-cropcenter-1080-1080.jpg" alt="شعار عين محايل">
+      <span>
+        <span class="brand-text">عين <span>محايل</span></span>
+        <span class="brand-sub">محايل عسير · الجنوب</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home');return false">الرئيسية</a></li>
+      <li><a href="#" onclick="showPage('list');return false">اعرض عقارك</a></li>
+      <li><a href="#" onclick="showPage('request');return false">اطلب عقارك</a></li>
+      <li><a href="#" onclick="showPage('advertise');return false">احجز إعلانك</a></li>
+      <li><a href="#" onclick="showPage('about');return false">من نحن</a></li>
+      <li><a href="#" onclick="showPage('contact');return false">تواصل</a></li>
+    </ul>
+    <button class="nav-cta" onclick="showPage('list')">اعرض عقارك</button>
+    <button class="burger" id="burger" aria-expanded="false">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
+        <rect y="0" width="22" height="2.5" rx="1.5" fill="#14110F"/>
+        <rect y="6.5" width="22" height="2.5" rx="1.5" fill="#8C2B32"/>
+        <rect y="13" width="22" height="2.5" rx="1.5" fill="#14110F"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="showPage('home');closeMobile();return false">الرئيسية</a>
+    <a href="#" onclick="showPage('list');closeMobile();return false">اعرض عقارك</a>
+    <a href="#" onclick="showPage('request');closeMobile();return false">اطلب عقارك</a>
+    <a href="#" onclick="showPage('advertise');closeMobile();return false">احجز إعلانك</a>
+    <a href="#" onclick="showPage('about');closeMobile();return false">من نحن</a>
+    <a href="#" onclick="showPage('privacy');closeMobile();return false">سياسة الخصوصية</a>
+    <a href="#" onclick="showPage('contact');closeMobile();return false">تواصل</a>
+  </div>
+</header>
+
+<!-- ======= الرئيسية ======= -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow reveal">منصة عين محايل الإعلانية والعقارية</p>
+          <h1 class="reveal">محايل <span class="accent">تشوفها</span><br>من هنا.</h1>
+          <p class="hero-lede reveal">منصة محلية يديرها عادل فائع علي عسيري — وسيط عقاري مرخّص. إعلانك يوصل لأكثر من ٣٠٠ ألف متابع من أهل محايل وما حولها.</p>
+        </div>
+        <div style="text-align:center" class="reveal">
+          <img class="hero-logo" src="https://i.ibb.co/zVtVCdDD/88bce7ad683fa9abdb4e26cd6efd0c1b-tplv-tiktokx-cropcenter-1080-1080.jpg" alt="عين محايل">
+          <p class="hero-logo-cap">عين محايل</p>
+        </div>
+      </div>
+      <div class="service-cards reveal">
+        <div class="sc" onclick="showPage('list')">
+          <div class="sc-icon" style="background:#FEF3F2"><svg viewBox="0 0 24 24" fill="none" stroke="#8C2B32" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <span class="sc-tag">عقار</span>
+          <h3>اعرض عقارك</h3>
+          <p>بيع أو تأجير عقارك لأكبر جمهور في محايل وما حولها.</p>
+          <span class="sc-arrow">‹</span>
+        </div>
+        <div class="sc" onclick="showPage('request')">
+          <div class="sc-icon" style="background:#F0FAF5"><svg viewBox="0 0 24 24" fill="none" stroke="#1E6B4F" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <span class="sc-tag">طلب</span>
+          <h3>اطلب عقارك</h3>
+          <p>سجّل مواصفات العقار وسنتواصل معك فور توفّره.</p>
+          <span class="sc-arrow">‹</span>
+        </div>
+        <div class="sc" onclick="showPage('advertise')">
+          <div class="sc-icon" style="background:#FEF8EF"><svg viewBox="0 0 24 24" fill="none" stroke="#C09A6B" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <span class="sc-tag">إعلان</span>
+          <h3>احجز إعلانك</h3>
+          <p>إعلان عقاري أو تجاري — يوصل لأهل محايل عبر ٤ منصات.</p>
+          <span class="sc-arrow">‹</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="region-strip">
+    <div class="wrap"><div class="region-inner">
+      <span class="region-item"><span class="rdot"></span>محايل عسير</span>
+      <span class="region-item"><span class="rdot"></span>بارق</span>
+      <span class="region-item"><span class="rdot"></span>المجاردة</span>
+      <span class="region-item"><span class="rdot"></span>رجال ألمع</span>
+      <span class="region-item"><span class="rdot"></span>قنا</span>
+      <span class="region-item"><span class="rdot"></span>البحر</span>
+      <span class="region-item"><span class="rdot"></span>تهامة الجنوب</span>
+    </div></div>
+  </div>
+
+  <svg class="sadu" preserveAspectRatio="none" aria-hidden="true"><rect width="100%" height="20" fill="url(#sadu)"/></svg>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="sec-num">المنصات</span><h2>وين يوصل إعلانك</h2><p>جمهور محلي من محايل وما جاورها يشتري ويتابع محلياً.</p></div>
+      <div class="platforms reveal">
+        <div class="pcard"><div class="pcard-icon" style="background:#FFFC00"><svg viewBox="0 0 24 24" fill="#000"><path d="M12.166 2c1.345 0 5.863.38 7.965 5.27.626 1.432.477 3.875.365 5.665-.027.422-.052.82-.065 1.17.306.158.84.32 1.69.168.347-.064.658.02.882.233.224.213.295.513.196.812-.196.598-.94.986-1.59 1.198-.196.064-.4.12-.598.176-.716.2-1.312.367-1.63.93-.08.14-.12.294-.12.45 0 .156.04.31.12.45.56.96 2.13 2.22 4.02 3.17.34.173.4.42.15.63-.77.634-2.08 1.03-3.88 1.18-.186.014-.37.02-.553.02-.517 0-1.01-.04-1.46-.09-.5.67-.9 1.66-.9 2.77 0 .31-.2.47-.5.47-.3 0-.5-.16-.5-.47 0-1.11-.4-2.1-.9-2.77-.45.05-.94.09-1.46.09-.183 0-.367-.006-.553-.02-1.8-.15-3.11-.546-3.88-1.18-.25-.21-.19-.457.15-.63 1.89-.95 3.46-2.21 4.02-3.17.08-.14.12-.294.12-.45 0-.156-.04-.31-.12-.45-.318-.563-.914-.73-1.63-.93-.198-.056-.402-.112-.598-.176-.65-.212-1.394-.6-1.59-1.198-.099-.299-.028-.599.196-.812.224-.213.535-.297.882-.233.85.152 1.384-.01 1.69-.168-.013-.35-.038-.748-.065-1.17-.112-1.79-.261-4.233.365-5.665C6.303 2.38 10.82 2 12.166 2z"/></svg></div><div><span class="pcard-name">سناب شات</span><span class="pcard-handle">@snap_mohayl</span><p class="pcard-desc">تغطيات يومية · ستوري إعلاني · جولات عقارية</p></div></div>
+        <div class="pcard"><div class="pcard-icon" style="background:#000"><svg viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></div><div><span class="pcard-name">تويتر X</span><span class="pcard-handle">@3adl3siri</span><p class="pcard-desc">أخبار المنطقة · عروض عقارية مثبّتة</p></div></div>
+        <div class="pcard"><div class="pcard-icon" style="background:#010101"><svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg></div><div><span class="pcard-name">تيك توك</span><span class="pcard-handle">@eye_moh</span><p class="pcard-desc">فيديوهات ميدانية · جولات المشاريع</p></div></div>
+        <div class="pcard"><div class="pcard-icon" style="background:#229ED9"><svg viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></div><div><span class="pcard-name">تيليقرام</span><span class="pcard-handle">عين محايل</span><p class="pcard-desc">قناة العروض اليومية · أرشيف العقارات</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--paper);padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="sec-num">الخدمات</span><h2>ماذا نقدّم</h2><p>كل خدمة لها فورم — تملأه ونتواصل معك مباشرة.</p></div>
+      <div class="cards4 reveal">
+        <article class="card" style="cursor:pointer" onclick="showPage('list')"><span class="card-tag">عقار · بيع / إيجار</span><h3>اعرض عقارك</h3><p>فيلا، شقة، أرض أو محل. ادخّل التفاصيل ونتولى التسويق.</p></article>
+        <article class="card" style="cursor:pointer" onclick="showPage('request')"><span class="card-tag">عقار · طلب</span><h3>اطلب عقارك</h3><p>سجّل مواصفات ما تبحث عنه ونتواصل فور توفّره.</p></article>
+        <article class="card" style="cursor:pointer" onclick="showPage('advertise')"><span class="card-tag">إعلان · تجاري</span><h3>احجز إعلانك</h3><p>محل، مطعم، أو فعالية. يصل لجمهور محايل عبر ٤ منصات.</p></article>
+        <article class="card"><span class="card-tag">وساطة · مرخّص</span><h3>وساطة عقارية</h3><p>نشتغل بفريق ونعرف السوق المحلي. ترخيص فال ساري.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec trust-bg">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="sec-num" style="color:var(--gold)">التراخيص</span><h2 style="color:#fff">تتعامل مع جهة موثّقة</h2><p style="color:#9E968C">الأرقام قابلة للتحقق — راجعها قبل أي تعامل.</p></div>
+      <dl class="lic reveal">
+        <div><dt>ترخيص فال العقارية</dt><dd>1100038743</dd><small>وسيط عقاري مرخّص من الهيئة العامة للعقار</small></div>
+        <div><dt>توثيق موثوق</dt><dd>636290</dd><small>حساب موثّق للتعامل التجاري الإلكتروني</small></div>
+        <div><dt>صاحب المنصة</dt><dd style="font-size:1.1rem;direction:rtl">عادل فائع علي عسيري</dd><small>مؤسس ومشرف حسابات عين محايل</small></div>
+      </dl>
+    </div>
+  </section>
+  <svg class="sadu" style="height:24px" preserveAspectRatio="none" aria-hidden="true"><rect width="100%" height="24" fill="url(#sadu)"/></svg>
+</div>
+
+<!-- ======= اعرض عقارك ======= -->
+<div class="page" id="page-list">
+  <div class="privacy-hero" style="background:var(--maroon)">
+    <div class="wrap"><span class="sec-num" style="color:rgba(255,255,255,.6)">عقار · بيع / إيجار</span><h2>اعرض عقارك</h2><p>ادخّل تفاصيل عقارك وسيوصلك ردنا على واتساب.</p></div>
+  </div>
+  <section class="sec"><div class="wrap" style="max-width:720px">
+    <div class="form-wrap">
+      <p class="form-title">بيانات العقار</p><p class="form-sub">الحقول المشار إليها بـ * مطلوبة</p>
+      <form class="fg" id="listForm" novalidate>
+        <div class="fl"><label>اسمك الكامل *</label><input type="text" name="name" placeholder="محمد عبدالله" required></div>
+        <div class="fl"><label>رقم الجوال *</label><input type="tel" name="phone" placeholder="05xxxxxxxx" required></div>
+        <div class="fl"><label>نوع العقار *</label><select name="type" required><option value="" disabled selected>اختر</option><option>فيلا</option><option>شقة</option><option>أرض</option><option>محل تجاري</option><option>مزرعة</option><option>استراحة</option><option>أخرى</option></select></div>
+        <div class="fl"><label>الغرض *</label><select name="purpose" required><option value="" disabled selected>اختر</option><option>بيع</option><option>إيجار</option></select></div>
+        <div class="fl full"><label>موقع العقار *</label><input type="text" name="location" placeholder="مثال: حي النزهة — محايل عسير" required></div>
+        <div class="fl"><label>المساحة (م²)</label><input type="text" name="area" placeholder="400"></div>
+        <div class="fl"><label>السعر المطلوب (ر.س)</label><input type="text" name="price" placeholder="600,000"></div>
+        <div class="fl full"><label>رقم الإعلان العقاري</label><input type="text" name="adnum" placeholder="7xxxxxxxxx"></div>
+        <div class="fl full"><label>وصف إضافي</label><textarea name="desc" placeholder="غرف، أدوار، إطلالة، قرب من خدمات…"></textarea></div>
+        <div class="full"><button type="submit" class="btn btn-maroon">أرسل بيانات العقار</button></div>
+        <div class="form-ok" id="listOk"><b>وصل طلبك ✓</b>سنتواصل معك على واتساب.</div>
+        <p class="form-note-sm">* بياناتك تُستخدم فقط للتواصل بشأن عقارك.</p>
+      </form>
+    </div>
+  </div></section>
+</div>
+
+<!-- ======= اطلب عقارك ======= -->
+<div class="page" id="page-request">
+  <div class="privacy-hero" style="background:var(--green)">
+    <div class="wrap"><span class="sec-num" style="color:rgba(255,255,255,.6)">عقار · طلب</span><h2>اطلب عقارك</h2><p>سجّل مواصفات ما تبحث عنه وسنتواصل معك فور توفّره.</p></div>
+  </div>
+  <section class="sec"><div class="wrap" style="max-width:720px">
+    <div class="form-wrap">
+      <p class="form-title">مواصفات ما تدور عليه</p><p class="form-sub">كلما كانت التفاصيل أوضح، كان بحثنا أدق.</p>
+      <form class="fg" id="requestForm" novalidate>
+        <div class="fl"><label>اسمك الكامل *</label><input type="text" name="name" placeholder="محمد عبدالله" required></div>
+        <div class="fl"><label>رقم الجوال *</label><input type="tel" name="phone" placeholder="05xxxxxxxx" required></div>
+        <div class="fl"><label>نوع العقار *</label><select name="type" required><option value="" disabled selected>اختر</option><option>فيلا</option><option>شقة</option><option>أرض</option><option>محل تجاري</option><option>مزرعة</option><option>أخرى</option></select></div>
+        <div class="fl"><label>الغرض *</label><select name="purpose" required><option value="" disabled selected>اختر</option><option>شراء</option><option>إيجار</option></select></div>
+        <div class="fl full"><label>المنطقة أو الحي المفضّل *</label><input type="text" name="location" placeholder="محايل — حي الروضة أو قريب من المدارس" required></div>
+        <div class="fl"><label>الميزانية التقريبية (ر.س)</label><input type="text" name="budget" placeholder="400,000"></div>
+        <div class="fl"><label>المساحة التقريبية (م²)</label><input type="text" name="area" placeholder="300 فأكثر"></div>
+        <div class="fl full"><label>تفاصيل إضافية</label><textarea name="desc" placeholder="غرف، أدوار، اشتراطات خاصة…"></textarea></div>
+        <div class="full"><button type="submit" class="btn btn-green">أرسل طلب العقار</button></div>
+        <div class="form-ok" id="requestOk"><b>وصل طلبك ✓</b>سنتواصل فور توفّر ما يناسبك.</div>
+        <p class="form-note-sm">* بياناتك تُستخدم فقط للبحث عن عقارك.</p>
+      </form>
+    </div>
+  </div></section>
+</div>
+
+<!-- ======= احجز إعلانك ======= -->
+<div class="page" id="page-advertise">
+  <div class="privacy-hero">
+    <div class="wrap">
+      <span class="sec-num" style="color:var(--gold)">إعلان · تسويق</span>
+      <h2>احجز إعلانك</h2>
+      <p>إعلان عقاري أو تجاري — يوصل لأهل محايل عبر ٤ منصات.</p>
+      <div class="adv-plans">
+        <div class="plan"><p class="plan-name">إعلان مفرد</p><p class="plan-dur">ستوري واحد · يوم</p><ul class="plan-feats"><li>تصميم جاهز من العميل</li><li>نشر على سناب</li><li>سعر يُحدَّد بالتواصل</li></ul><button class="btn btn-ghost" onclick="document.getElementById('advForm').scrollIntoView({behavior:'smooth'})">اختر</button></div>
+        <div class="plan featured"><span class="plan-badge">الأكثر طلباً</span><p class="plan-name">باقة العقار</p><p class="plan-dur">ستوري + تثبيت · ٣ أيام</p><ul class="plan-feats"><li>سناب + تويتر X</li><li>رقم الإعلان العقاري</li><li>تحويل الاتصالات مباشرة</li><li>سعر يُحدَّد بالتواصل</li></ul><button class="btn btn-maroon" onclick="document.getElementById('advForm').scrollIntoView({behavior:'smooth'})">اختر</button></div>
+        <div class="plan"><p class="plan-name">تغطية ميدانية</p><p class="plan-dur">زيارة ميدانية · كل المنصات</p><ul class="plan-feats"><li>تصوير داخل موقعك</li><li>نشر على ٤ منصات</li><li>مناسبات وافتتاحات</li><li>سعر يُحدَّد بالتواصل</li></ul><button class="btn btn-ghost" onclick="document.getElementById('advForm').scrollIntoView({behavior:'smooth'})">اختر</button></div>
+      </div>
+    </div>
+  </div>
+  <section class="sec" id="advForm"><div class="wrap" style="max-width:720px">
+    <div class="form-wrap">
+      <p class="form-title">بيانات الإعلان</p><p class="form-sub">عبّي التفاصيل وسنتواصل بعرض سعر واضح، بدون التزام مسبق.</p>
+      <form class="fg" id="advertiseForm" novalidate>
+        <div class="fl"><label>الاسم الكامل *</label><input type="text" name="name" placeholder="محمد عبدالله" required></div>
+        <div class="fl"><label>رقم الجوال *</label><input type="tel" name="phone" placeholder="05xxxxxxxx" required></div>
+        <div class="fl"><label>نوع الإعلان *</label><select name="type" required><option value="" disabled selected>اختر</option><option>عقار — بيع</option><option>عقار — إيجار</option><option>عقار — أرض</option><option>محل تجاري</option><option>مطعم أو كافيه</option><option>تغطية ميدانية</option><option>أخرى</option></select></div>
+        <div class="fl"><label>موقع الإعلان *</label><input type="text" name="location" placeholder="حي النزهة — محايل" required></div>
+        <div class="fl full"><label>تفاصيل إضافية</label><textarea name="desc" placeholder="أي معلومة تساعدنا نقدّم لك عرض سعر مناسب…"></textarea></div>
+        <div class="full"><button type="submit" class="btn btn-maroon">أرسل الطلب</button></div>
+        <div class="form-ok" id="advertiseOk"><b>وصل طلبك ✓</b>سنتواصل بعرض سعر على واتساب.</div>
+        <p class="form-note-sm">* لا التزام قبل الاتفاق على السعر والموعد.</p>
+      </form>
+    </div>
+  </div></section>
+</div>
+
+<!-- ======= من نحن ======= -->
+<div class="page" id="page-about">
+  <div class="privacy-hero">
+    <div class="wrap"><span class="sec-num" style="color:var(--gold)">من نحن</span><h2>قصة عين محايل</h2><p>منصة محلية من قلب الجنوب.</p></div>
+  </div>
+  <section class="sec"><div class="wrap">
+    <div class="about-grid reveal">
+      <div>
+        <span class="sec-num">المؤسس</span>
+        <h2 style="margin-bottom:20px">عادل فائع علي عسيري</h2>
+        <p style="font-size:1rem;color:var(--muted);line-height:2;margin-bottom:16px">وسيط عقاري مرخّص من الهيئة العامة للعقار برقم 1100038743، ومؤسس منصة عين محايل الإعلانية والعقارية في محايل عسير.</p>
+        <p style="font-size:1rem;color:var(--muted);line-height:2;margin-bottom:16px">عين محايل تأسست لتكون الوجهة الأولى لأهل المنطقة — من بارق لرجال ألمع، ومن المجاردة للبحر. منصة محلية حقيقية يديرها ابن المنطقة، يعرف أحياءها وأسواقها وناسها.</p>
+        <p style="font-size:1rem;color:var(--muted);line-height:2;margin-bottom:32px">أكثر من ٣٠٠ ألف متابع عبر سناب شات وتويتر وتيك توك وتيليقرام، كلهم من المنطقة، يتابعون لأن المحتوى محلي حقيقي. مو منصة من بعيد — نجي لموقعك، نصوّر، ننشر، ونتابع معك.</p>
+        <div class="about-stat">
+          <div class="stat"><b>+٣٠٠ ألف</b><span>متابع عبر المنصات</span></div>
+          <div class="stat"><b>٤</b><span>منصات نشر</span></div>
+          <div class="stat"><b>مرخّص</b><span>فال ووسيط عقاري</span></div>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <img class="about-logo" src="https://i.ibb.co/zVtVCdDD/88bce7ad683fa9abdb4e26cd6efd0c1b-tplv-tiktokx-cropcenter-1080-1080.jpg" alt="عين محايل">
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec trust-bg">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="sec-num" style="color:var(--gold)">التراخيص</span><h2 style="color:#fff">موثّق ومرخّص</h2></div>
+      <dl class="lic reveal">
+        <div><dt>ترخيص فال العقارية</dt><dd>1100038743</dd><small>وسيط عقاري مرخّص من الهيئة العامة للعقار</small></div>
+        <div><dt>توثيق موثوق</dt><dd>636290</dd><small>حساب موثّق للتعامل التجاري الإلكتروني</small></div>
+        <div><dt>الموقع</dt><dd style="font-size:1rem;direction:rtl">محايل عسير، المملكة العربية السعودية</dd><small>نخدم محايل وكل مناطق عسير الجنوبية</small></div>
+      </dl>
+    </div>
+  </section>
+  <svg class="sadu" style="height:24px" preserveAspectRatio="none" aria-hidden="true"><rect width="100%" height="24" fill="url(#sadu)"/></svg>
+</div>
+
+<!-- ======= سياسة الخصوصية ======= -->
+<div class="page" id="page-privacy">
+  <div class="privacy-hero">
+    <div class="wrap"><span class="sec-num" style="color:var(--gold)">قانوني</span><h2>سياسة الخصوصية</h2><p>آخر تحديث: أغسطس ٢٠٢٦</p></div>
+  </div>
+  <section class="sec"><div class="wrap privacy-wrap">
+
+    <h3>أولاً: من نحن</h3>
+    <p>منصة عين محايل منصة إعلانية وعقارية محلية في محايل عسير، يديرها عادل فائع علي عسيري — وسيط عقاري مرخّص من الهيئة العامة للعقار برقم 1100038743.</p>
+
+    <h3>ثانياً: البيانات التي نجمعها</h3>
+    <p>عند تعبئة أي فورم في الموقع نجمع فقط:</p>
+    <ul><li>الاسم الكامل</li><li>رقم الجوال</li><li>تفاصيل الطلب (نوع العقار أو الإعلان والموقع)</li></ul>
+    <p>الموقع لا يستخدم كوكيز ولا يتتبع الزوّار.</p>
+
+    <h3>ثالثاً: كيف نستخدم البيانات</h3>
+    <p>بياناتك تُستخدم لغرض واحد فقط — التواصل معك على واتساب للرد على طلبك. لا نبيع البيانات، لا نشاركها مع أي طرف ثالث، لا نستخدمها لأغراض تسويقية دون إذنك.</p>
+
+    <h3>رابعاً: كيف تنتقل البيانات</h3>
+    <p>عند الضغط على إرسال، يفتح تطبيق واتساب برسالة جاهزة تحتوي على بياناتك وتصل مباشرة لرقمنا. لا توجد قاعدة بيانات ولا خوادم وسيطة.</p>
+
+    <h3>خامساً: حقوقك</h3>
+    <ul>
+      <li>تقدر تطلب حذف أي بيانات أرسلتها في أي وقت</li>
+      <li>تقدر تطلب معرفة ما عندنا من معلومات عنك</li>
+      <li>التواصل لأي من هذه الطلبات عبر واتساب على 0558764123</li>
+    </ul>
+
+    <h3>سادساً: الروابط الخارجية</h3>
+    <p>الموقع يحتوي روابط لمنصات خارجية (سناب، تويتر، تيك توك، تيليقرام، واتساب). سياسة الخصوصية هذه لا تغطي تلك المنصات — كل منصة لها سياستها المستقلة.</p>
+
+    <h3>سابعاً: التعديلات</h3>
+    <p>نحتفظ بحق تعديل هذه السياسة في أي وقت. التاريخ أعلاه يوضح آخر تحديث.</p>
+
+    <h3>التواصل</h3>
+    <p>واتساب: <a href="https://wa.me/966558764123" style="color:var(--maroon);font-weight:700">0558764123</a><br>جميع الحسابات: <a href="https://solo.to/adil.aseery" style="color:var(--maroon);font-weight:700">solo.to/adil.aseery</a></p>
+
+  </div></section>
+</div>
+
+<!-- ======= تواصل ======= -->
+<div class="page" id="page-contact">
+  <div class="privacy-hero">
+    <div class="wrap"><span class="sec-num" style="color:var(--gold)">تواصل</span><h2>نحن هنا</h2><p>اختر القناة المناسبة — نرد خلال ساعات العمل.</p></div>
+  </div>
+  <section class="sec"><div class="wrap">
+    <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:start" class="contact-grid">
+      <ul class="chan reveal">
+        <li><a href="https://wa.me/966558764123"><span class="cn">واتساب مباشر</span><span class="cv">+966 55 876 4123</span></a></li>
+        <li><a href="https://snapchat.com/add/snap_mohayl"><span class="cn">سناب شات</span><span class="cv">@snap_mohayl</span></a></li>
+        <li><a href="https://x.com/3adl3siri"><span class="cn">تويتر X</span><span class="cv">@3adl3siri</span></a></li>
+        <li><a href="https://www.tiktok.com/@eye_moh"><span class="cn">تيك توك</span><span class="cv">@eye_moh</span></a></li>
+        <li><a href="https://solo.to/adil.aseery"><span class="cn">كل الحسابات</span><span class="cv">solo.to/adil.aseery</span></a></li>
+      </ul>
+      <div class="reveal" style="background:var(--ink);color:#fff;padding:34px 28px">
+        <p style="font-family:var(--display);font-size:1.3rem;font-weight:900;margin-bottom:12px">عادل فائع علي عسيري</p>
+        <p style="color:#A29A90;font-size:.92rem;font-weight:400;line-height:1.85;margin-bottom:22px">مؤسس منصة عين محايل · وسيط عقاري مرخّص · محايل عسير</p>
+        <dl style="display:grid;gap:10px">
+          <div><dt style="font-size:.72rem;color:var(--gold);font-family:var(--display);font-weight:700;margin-bottom:4px">ترخيص فال</dt><dd style="font-family:var(--display);font-size:1.2rem;font-weight:800">1100038743</dd></div>
+          <div><dt style="font-size:.72rem;color:var(--gold);font-family:var(--display);font-weight:700;margin-bottom:4px">موثوق</dt><dd style="font-family:var(--display);font-size:1.2rem;font-weight:800">636290</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- فوتر -->
+<svg class="sadu" style="height:24px" preserveAspectRatio="none" aria-hidden="true"><rect width="100%" height="24" fill="url(#sadu)"/></svg>
+<footer>
+  <div class="wrap foot">
+    <span class="foot-brand">عين <span>محايل</span></span>
+    <div class="foot-links">
+      <a href="#" onclick="showPage('about');return false">من نحن</a>
+      <a href="#" onclick="showPage('privacy');return false">سياسة الخصوصية</a>
+      <a href="#" onclick="showPage('contact');return false">تواصل</a>
+    </div>
+    <span>© <span id="yr"></span> عادل فائع علي عسيري · ترخيص فال 1100038743</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  var el = document.getElementById('page-' + id);
+  if (el) el.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+}
+
+var burger = document.getElementById('burger');
+var mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', function() {
+  var open = mobileMenu.classList.toggle('open');
+  this.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+function closeMobile() {
+  mobileMenu.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+}
+document.addEventListener('click', function(e) {
+  if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !burger.contains(e.target)) closeMobile();
+});
+
+function buildMsg(form, label) {
+  var data = new FormData(form);
+  var msg = 'السلام عليكم،\n' + label + '\n\n';
+  data.forEach(function(v,k) { if(v) msg += '• ' + k + ': ' + v + '\n'; });
+  return msg;
+}
+function wireForm(id, okId, label) {
+  var f = document.getElementById(id);
+  if (!f) return;
+  f.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var ok = true;
+    f.querySelectorAll('[required]').forEach(function(el) {
+      if (!el.value.trim()) { el.style.borderColor='#8C2B32'; ok=false; }
+      else el.style.borderColor='';
+    });
+    if (!ok) { alert('يرجى تعبئة الحقول المطلوبة.'); return; }
+    window.open('https://wa.me/966558764123?text=' + encodeURIComponent(buildMsg(f, label)), '_blank');
+    document.getElementById(okId).classList.add('show');
+    f.reset();
+  });
+}
+wireForm('listForm','listOk','طلب عرض عقار للبيع أو الإيجار');
+wireForm('requestForm','requestOk','طلب البحث عن عقار');
+wireForm('advertiseForm','advertiseOk','طلب حجز إعلان');
+
+var items = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion:reduce)').matches) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(en) { if(en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:.1,rootMargin:'0px 0px -20px 0px'});
+  items.forEach(function(el,i) { el.style.transitionDelay=(Math.min(i,4)*55)+'ms'; io.observe(el); });
+} else {
+  items.forEach(function(el) { el.classList.add('in'); });
+}
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+if(window.netlifyIdentity){
+  window.netlifyIdentity.on("init",function(u){
+    if(!u){window.netlifyIdentity.on("login",function(){document.location.href="/admin/";})}
+  });
+}
+</script>
+</body>
+</html>
