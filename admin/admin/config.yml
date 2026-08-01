@@ -1,1 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
 
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: properties
+    label: العقارات
+    folder: _properties
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: العنوان, name: title, widget: string }
+      - { label: النوع, name: type, widget: select, options: [فيلا, شقة, أرض, محل, مزرعة, استراحة] }
+      - { label: الغرض, name: purpose, widget: select, options: [بيع, إيجار] }
+      - { label: الموقع, name: location, widget: string }
+      - { label: السعر, name: price, widget: string }
+      - { label: المساحة, name: area, widget: string, required: false }
+      - { label: الوصف, name: body, widget: markdown }
